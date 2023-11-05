@@ -1,0 +1,36 @@
+.bgimage{
+    background: linear-gradient(rgba(70, 8, 8, 0.367),rgba(5,7,12,0.75)),
+    url(img/bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.proxestrenos{
+    margin: 40px;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    color:white;
+}
+
+
+.copyright{
+    margin: 10px;
+    text-align: center;
+    color: white;
+}
+
+.foot{
+    text-align: center;
+    color: white;
+}
+
+.ubic{
+    margin: 40px;
+    text-align: center;
+    color: white;
+}
+
+.banner-altura-400 {
+    height: 650px;
+    width: 100%;
+}

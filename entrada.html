@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Autocine Buenos Aires</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <img src="" alt="">
+    <style>
+      .rojo{
+        color: red;
+      }
+
+      .negro{
+        color: darkgreen;
+      }
+
+    </style>
+</head>
+
+
+<body class="bgimage">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navbar-light bg-light bg-dark border-bottom border-body" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand"><img src="./img/favicon.png" alt="Bootstrap" width="30" height="24"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link fw-bold fs-5" href="./index.html#Inicio">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-bold fs-5" href="./index.html#Estrenos">Estrenos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-bold fs-5" href="./index.html#Ubicacion">Ubicación</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-bold fs-5" href="./contacto.html">Contacto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-bold fs-5" href="./entrada.html">Comprar Entrada</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+</header>
+
+<main>
+  
+  <form class="row g-1 gx-2 formulario" style="margin: 60px;" id="formulario">
+    <div class="text-center">
+      <p class="m-0">
+        <label class="alert alert-dark fw-bold fs-2 mt-4" role="alert">Valor Entrada: $2500</label>
+      </p>
+  </div>
+    <div class="form-row">
+      <div class="row g-3">
+        <div class="col">
+          <label for="Nombre" class="fw-bold fs-4 mt-4" style="color: white;">Nombre:</label>
+          <input type="text" class="form-control" placeholder="Nombre" id="nombre">
+        </div>
+        <div class="col">
+          <label for="Apellido" class="fw-bold fs-4 mt-4" style="color: white;">Apellido:</label>
+          <input type="text" class="form-control" placeholder="Apellido" id="apellido">
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email" class="fw-bold fs-4 mt-1" style="color: white;">Correo Electrónico:</label>
+      <input type="email" class="form-control" id="email" placeholder="Correo electrónico">
+    </div>
+    <div class="form-group">
+      <label for="pelicula" class="fw-bold fs-4 mt-1" style="color: white;">Seleccionar Pelicula:</label>
+        <select id="pelicula" class="form-select">
+            <option value="Titanic">Titanic</option>
+            <option value="Arma Mortal 1">Arma Mortal 1</option>
+            <option value="Harry Potter 1">Harry Potter 1</option>
+            <option value="Toy Story 1">Toy Story 1</option>
+            <option value="Shrek 1">Shrek 1</option>
+            <option value="El Hombre Araña 1">El Hombre Araña 1</option>
+        </select>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="cantidad" class="fw-bold fs-4 mt-1" style="color: white;">Cantidad Entradas:</label>
+      <input type="number" class="form-control" id="cantidad" placeholder="Cantidad">
+  </div>
+  <div class="col-md-6 mb-3">
+    <label for="categoria" class="fw-bold fs-4 mt-1" style="color: white;">Categoria Descuento:</label>
+      <select id="categoria" class="form-select">
+          <option value="sindescuento">Sin Descuento</option>
+          <option value="codoacodo">Codo A Codo (25% off)</option>
+          <option value="clubautocine">Club Autocine (40% off)</option>
+          <option value="jubilados">Jubilados (50% off)</option>
+      </select>
+  </div>
+    <br>
+    <div class="alert alert-success" role="alert">
+      <h4 class="alert-heading" id="pelSeleccionada">Pelicula seleccionada: Titanic</h4>
+      <h4 class="alert-heading" id="cantEntradas">Cantidad de entradas: 0</h4>
+      <h4 class="alert-heading" id="totPagar">Total a pagar: $0</h4>
+      <hr>
+      <p class="mb-0" id="valEstado">Complete el formulario de entradas.</p>
+    </div>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button type="submit" class="btn btn-outline-secondary fw-bold mt-1" id="valEntrada">Validar Entradas</button>
+    </div>
+    <div class="d-grid gap-2 col-6 mx-auto"> 
+      <button type="submit" class="btn btn-outline-secondary fw-bold mt-1" id="limpForm">Limpiar Formulario</button>
+    </div>
+  </form>
+
+  <section>
+    <h2 class="ubic">Estamos ubicados en Av. de los Constiuyentes y Av. General Paz, Buenos Aires, Argentina:</h2>
+    <p style="text-align: center;">
+    <iframe id="Ubicacion" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1642.6682395780872!2d-58.51004566106753!3d-34.  570351684628676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb6fe1fe2cd51%3A0xff8a03bd79933810!2sAv.%20de%20los%20Constituyentes%20176%2C%20C1431%20CABA!5e0!3m2!1ses-419!2sar!4v1695687776090!5m2!1ses-419!2sar" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </p>
+  </section>
+</main>
+
+
+
+<footer>
+
+  <h3 style="text-align: center; color: white;">Siguenos en: </h2>
+ <p style="text-align: center"><a class="facebook" href="http://facebook.com" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a class="twitter" href="http://twitter.com" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a class="instagram" href="http://instagram.com" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a> <a class="google" href="http://gmail.com" target="_blank"><i class="fa fa-google fa-2x" aria-hidden="true"></i></a><a class="youtube" href="http://youtube.com" target="_blank"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a><a class="whastapp" href="http://whatsapp.com" target="_blank"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a></p>
+
+
+  <h5 class="copyright">Copyright © 2023 Joni ~</h5>
+  <h6 class="foot">Todos los derechos reservados.<br>
+  Trabajo integrador 1<br>
+  <a href="https://buenosaires.gob.ar/educacion/codo-codo-40" target="_blank" rel="noopener noreferrer">Codo A Codo 4.0</a><br>
+  Comision 23556</h6>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
